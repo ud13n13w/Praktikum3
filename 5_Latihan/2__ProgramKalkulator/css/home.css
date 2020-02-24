@@ -1,0 +1,91 @@
+html{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: white;
+}
+
+.header{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	background-color: #2F363F;
+	padding-bottom: 10px;
+}
+
+	div.header h3{
+		margin: 0px 0px	0px 3%;
+		padding-top: 1%;
+		padding-bottom: 0.5%;
+		font-family: helvetica;
+		text-align: left;
+		color : white;
+		font-size: 25px
+	}
+
+	div.header hr{
+		margin: 0px 0px	0px 3%;
+		width: 53%;
+	}
+
+	div.header p{
+		margin: 0px 0px	0px 3%;
+		padding-top: 1%;
+		padding-bottom: 0.5%;
+		
+		font-family: helvetica;
+		text-align: left;
+		color : white;
+		font-size: 25px;
+		font-weight: lighter;
+	}
+
+.body{
+	width: 100%;
+	height: 800px;
+	margin: 0 auto;
+	background-color: #929292;
+}
+	
+	form{
+		width: 100%;
+		height: 100%;
+	}
+
+	.tabel{
+		width: 100%
+		height: 100%;
+		margin: 0 auto;
+		padding-top: 20px;
+		color: #232323;
+		padding-bottom: 30px;
+	}
+
+		.tabel table{
+			width: 30%;
+			margin: auto;
+			color: white;
+			background: #EAEBEC;
+			border: #ccc 1px solid;
+			border-collapse: collapse;
+		}
+
+		.tabel th, td{
+			width: 100%;
+			border: 1px solid #999;
+			padding: 8px 40px;
+			text-align: left;
+		}
+
+		.tabel th{
+			background-color: #3D6ADE;
+		}
+
+		.tabel #btn{
+			width: 100%;
+		}
+

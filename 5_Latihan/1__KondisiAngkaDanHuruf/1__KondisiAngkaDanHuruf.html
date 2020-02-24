@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<script type="text/javascript">
+	
+	function btnHitung(){
+
+		var angka = document.kirim.tb_angka.value
+		var huruf = ""
+
+		if(angka <= 40){
+			huruf = "dibawah rata-rata"
+		}else if(angka >= 41 && angka <= 55){
+			huruf = "D"
+		}else if(angka >= 56 && angka <= 60){
+			huruf = "C"
+		}else if(angka >= 61 && angka <= 65){
+			huruf = "BC"
+		}else if(angka >= 66 && angka <= 70){
+			huruf = "B"
+		}else if(angka >= 71 && angka <= 80){
+			huruf = "AB"
+		}else if(angka >= 81 && angka <= 100){
+			huruf = "A"
+		}else{
+			huruf = "melebihi batas"
+		}
+
+	document.write("<br>" + "Nilai anda adalah " + huruf)
+
+	}	
+
+</script>
+
+<body>
+
+	<form method="POST" name="kirim">
+		<p> Masukkan Angka (0-100): 
+			<input type="text" name="tb_angka" size="20">
+			<input type="button" name="btn_hitung" value="Hitung Nilai" onclick=btnHitung()>
+		</p>	
+	</form>
+
+</body>
+</html>

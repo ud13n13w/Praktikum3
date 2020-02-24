@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Program Kalkulator Javascript </title>
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+</head>
+
+<script type="text/javascript">
+
+	function kalkulator(operator){
+
+		var input1 = document.form_kalkulator.tb_input1.value
+		var input2 = document.form_kalkulator.tb_input2.value
+		var hasil = 0
+
+		//- Proses Validasi CODE START
+		if(input1 == '' || input2 == ''){
+			alert("Jangan mengosongi textbox")	
+		}else if(isNaN( parseInt(input1) ) == true || isNaN( parseInt(input2) ) == true){x
+			alert("Harap isi textbox dengan angka")		
+		//- Proses Validasi CODE END
+		}else{
+
+			// - Proses Kalkulasi CODE START
+			input1 = parseInt(input1)
+			input2 = parseInt(input2)
+
+			if(operator == 'penjumlahan'){
+				
+				hasil = input1 + input2
+
+			}else if(operator == 'pengurangan'){
+
+				hasil = input1 - input2
+
+			}else if(operator == 'perkalian'){
+
+				hasil = input1 * input2
+
+			}else if(operator == 'pembagian'){
+
+				hasil = input1 / input2
+
+			}
+			// - Proses Kalkulasi CODE END
+
+
+			// - Proses Output CODE START
+			document.form_kalkulator.tb_hasil.value = hasil
+			// - Proses Output CODE END
+
+		}
+	}
+
+	function lastmodified(){
+		document.write("Dimodifikasi terakhir pada " + document.lastModified); 
+	}
+
+</script>
+
+<body>
+
+	<div class="header">
+		<h3> Burhanuddin's Web Programming </h3>
+		<hr>
+		<p> Latihan 2 : Pembuatan Aplikasi Kalkulator </p>
+	</div>
+
+	<div class="body">
+		
+		<div class="tabel">
+			<form method="POST" name="form_kalkulator">
+				<table>
+					<tr>
+						<th colspan="4"> Masukkan Bilangan : </th>
+					</tr>
+					<tr>
+						<td colspan="2"> <input type="text" name="tb_input1" placeholder="Bilangan 1"> </td>
+						<td colspan="2"> <input type="text" name="tb_input2" placeholder="Bilangan 2"> </td>
+					</tr>
+					<tr>
+						<th colspan="4"> Pilih Operator : </th>
+					</tr>
+					<tr>
+						<td> <input type="button" id="btn" name="btn_penjumlahan" value="+" onclick="kalkulator('penjumlahan')"> </td>
+						<td> <input type="button" id="btn" name="btn_pengurangan" value="-" onclick="kalkulator('pengurangan')"> </td>
+						<td> <input type="button" id="btn" name="btn_perkalian" value="x" onclick="kalkulator('perkalian')"> </td>
+						<td> <input type="button" id="btn" name="btn_pembagian" value="/" onclick="kalkulator('pembagian')"> </td>
+					</tr>
+					<tr>
+						<th colspan="4"> Hasil : </th>
+					</tr>
+					<tr>
+						<td colspan="4"> <input type="text" id="btn" name="tb_hasil" > </td>
+					</tr>
+					<tr>
+						<td colspan="4"> <input type="button" id="btn"  value="Last Modified" onclick="lastmodified()"> </td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>		
+
+</body>
+</html>
